@@ -1,0 +1,445 @@
+*{
+    padding: 0;
+    margin:0;
+}
+h4 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+h1{
+  letter-spacing:4px;
+  float:left;
+  align-items: center;
+}
+/* Стили для абзацев */
+p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-indent: 25px;/*красная строка*/
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5eb;
+  line-height: 1.5;
+  font-size: 1rem;
+  padding-top: 80px;
+  margin-top: 80px;
+}
+.header{
+    display:flex;
+    align-items: center;
+    padding-left: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(3, 54, 94,0.81);
+    color: rgba(255, 255, 255);
+    z-index: 9999;  
+}
+.logo{
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: url(logo/worldwide.png) center/cover;
+}
+.logo:hover{
+  transform: scale(1.45);
+  background: url(logo/worldwibe1.gif) center/cover;
+}
+.subheader {
+  display:flex;
+  float: left;
+  position: absolute;
+  top: 0;
+  background-color:  rgb(3, 54, 94,0.81);
+  z-index: 9998;
+  top: 100px;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+.menu{
+  font-size: 16px;
+  letter-spacing:3px;
+  align-items: center;
+  display:flex;
+  list-style: none;
+}
+.menu li{
+  margin-left:140px;
+}
+.menu li:hover{
+  transform: scale(1.4);
+  transition: 0.1s;
+}
+.menu li a {
+    color: #252b42; text-decoration:none;
+    color: rgba(255, 255, 255);
+}
+.menu li a:hover{
+    color:#fa4a0c;
+}
+/*левая колонка*/
+.sidebar { /* Левая колонка */
+  float: left; /* Обтекание справа */
+  margin-left: 10%;   
+  margin-top:0;
+}
+.flag{
+  height: 40px;
+  width: 60px;
+}
+.emblem{
+  height: 70px;
+  width: auto;
+}
+.photo{
+  height: 90px;
+  width: 90px;
+  vertical-align: top; /* Добавлено для вертикального выравнивания по центру */
+  position: flex;
+}
+
+/*модальное окно для фото*/
+.css-modal-target {
+  width: auto;
+  height: auto;
+  text-align: center;
+  overflow: auto;
+  animation: scale 0.5s ease;
+  background-color: #f0f0f0;
+}
+/* Контейнер, который затемняет страницу */
+.css-modal-target {
+  display: none;
+}
+.css-modal-target:target {
+  display:flex;
+  align-items:center;
+  justify-content:center;    
+  z-index: 10000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: 0.5s;
+  background: rgba(0, 0, 0, 0.4);
+  overflow:auto
+}
+
+/* Кнопка с крестиком закрывающая окно */
+.css-modal-close:after {
+  content: "X";
+  width: 30px;
+  height: 25px;
+  border-radius: 3px;
+  position: fixed;
+  right: 20px;
+  top:20px;
+  z-index: 10;
+  background-color: #FFF;
+  text-align: center;
+}
+/*правая колонка*/
+.content {
+  margin-left: 13%;
+  margin-right: 10%;
+}
+/*слайдер*/
+.slider-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {  
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  object-fit: cover;
+}
+.indexcontent{
+  text-align:center;
+}
+/* Анимация переключения слайдов */
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-200%);
+  }
+  65% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-300%);
+  }
+  85% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+.slides.auto {
+  animation: slideAnimation 15s infinite;
+}
+figcaption{
+   position: relative;
+}
+figcaption h1 {
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 7px;
+  background-color: rgba(0, 0, 0, 0.5); /* Цвет фона с прозрачностью */
+  color: #fff; /* Цвет текста */
+  text-align: center;
+}
+/*таблица*/
+table {
+  width: 50%;
+  margin: auto;
+  border-collapse: collapse;
+  border: 2px solid gray;
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 1.5px solid #696767;
+  padding: 10px;
+}
+
+th {
+  text-align: center;
+  background-color: #003357;;
+  color: #f5f5e6;
+}
+  /*подвал*/
+footer {
+  background-color: #003357;
+  padding: 20px 0;
+  float:left;
+  width: 100%;
+  color: #f5f5e6;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  margin-right: 100px;
+  
+}
+.column:last-child {
+  margin-right: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.icons {
+  max-width: 30px;
+  height: 30px;
+}
+.columnname{
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+  color:#f5f5e6;
+}
+/*contacts*/
+.tablecontact{
+  background-color: #fff;
+  width: 80%;
+}
+.mp{
+  width: 100%;
+}
+.contact-icon{
+  height: 50px;
+  width: 50px;
+  margin: 20px 50px 5px 5px;
+  float: left;
+}
+.email{
+  background: url(icons/email-file.png) center/cover;  
+}
+.email:hover {
+    transform: scale(1.4);
+    background: url(icons/email-file.gif) center/cover;
+}
+.location-pin{
+  background: url(icons/location.png) center/cover; 
+}
+.location-pin:hover{
+  transform: scale(1.4);
+  background: url(icons/location.gif) center/cover;
+}
+.clock{
+  background: url(icons/clock.png) center/cover; 
+}
+.clock:hover{
+  transform: scale(1.4);
+  background: url(icons/clock.gif) center/cover;
+}
+.telephone{
+  background: url(icons/telephone.png) center/cover; 
+}
+.telephone:hover{
+  transform: scale(1.4);
+  background: url(icons/telephone.gif) center/cover;
+}
+.details-and-description {
+  margin-bottom: 20px; 
+}
+.contact-info-title {
+  font-size: 16px;
+  color: #003357;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.contactsmaptd{
+  vertical-align: top;
+  text-align: center;
+}
+.contactsmaptd h3{
+  padding-bottom: 20px;
+}
+/*aboutsus*/
+section {
+  width: 50%;
+  margin: 1em auto;
+  padding: 1.5em;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*listofcountries*/
+.listtable{
+  width: 100%;
+}
+.listtable a{
+  text-decoration: none;
+  color: #003357;
+}
+.listtable a:hover {
+  font-weight: bold;
+}
+.listtable td{
+  width: 50%;
+}
+.tablecaption{
+  background-color: #fff;
+  color:black;
+}
+/*news*/
+.h2news{
+  text-align: center;
+  font-size: 50px;
+  letter-spacing:10px;
+}
+.news-city-name{
+  border-collapse: collapse;
+  border: 2px solid black;
+  background-color: #003357;
+  color:white;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-right: auto;
+  text-indent: 0px;
+  text-decoration: none;
+}
+.newssection{
+  margin-top: 10px;
+  width:auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: row;
+  order: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.newsdiv{
+  min-width: 250px;
+  display: inline-flex;
+  flex-direction: column;
+  margin: 30px;
+  width: 25%;
+  border-collapse:collapse;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+.newsphoto{
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.news-content{
+  padding: 1px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 16px;
+}
+.news-date{
+  padding: 1px;
+  display: flex;
+  justify-content: end;
+  font-style: italic;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-top: auto;
+}
+.a{
+  text-decoration: none;
+  color: white;
+}
+.a:hover{
+  transition: 0.2s;
+  color: #fa4a0c;
+}
